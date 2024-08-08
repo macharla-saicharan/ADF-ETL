@@ -1,0 +1,21 @@
+{
+	"name": "ds_adls_final_json_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_json_sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "order_type.json",
+				"folderPath": "output",
+				"fileSystem": "root"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

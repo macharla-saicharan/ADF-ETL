@@ -1,0 +1,14 @@
+{
+	"name": "ls_http_csv_source",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "this is the linked service created to connect to the http url from this i am downloading my orders.csv file.",
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://files.cdn.thinkific.com",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

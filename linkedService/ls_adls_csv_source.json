@@ -1,0 +1,13 @@
+{
+	"name": "ls_adls_csv_source",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "this is the same csv file which i stored in 1st storage account's adls gen2, have another ls named ls_adls_csv_source.",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://1ststorageaccount01.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEI3Q0Y4RDJCLTc1N0YtNDE0Ny1BMTkyLUNDMTVBRTBFMDc0N18xYmM5Mzk0Zi01YTlkLTQ0ZTEtYWIyYy05NDgyMzAyOTM1OGYiDQp9"
+		}
+	}
+}

@@ -1,0 +1,76 @@
+{
+	"name": "pl_master_pipeline",
+	"properties": {
+		"description": "here will execute all individual pipelines",
+		"activities": [
+			{
+				"name": "1st",
+				"description": "will execute pl_raw_data_extraction",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_raw_data_extraction",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "2nd",
+				"description": "will execute pl_transformation pipeline",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "1st",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_transformation",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "3rd",
+				"description": "will execute pl_load",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "2nd",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_load",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-08-08T11:30:19Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

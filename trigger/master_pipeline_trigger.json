@@ -1,0 +1,25 @@
+{
+	"name": "master_pipeline_trigger",
+	"properties": {
+		"description": "this is used to execute master pipeline at a schedule time intervals",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_master_pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 15,
+				"startTime": "2024-08-08T17:22:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
