@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-dev-india-ETL"
+		},
+		"ls_adls_csv_sink_accountKey": {
+			"value": ""
+		},
+		"ls_adls_csv_source_accountKey": {
+			"value": ""
+		},
+		"ls_adls_json_sink_accountKey": {
+			"value": ""
+		},
+		"ls_adls_transformedCSV_sink_accountKey": {
+			"value": ""
+		},
+		"ls_adls_csv_sink_properties_typeProperties_url": {
+			"value": "https://1ststorageaccount01.dfs.core.windows.net/"
+		},
+		"ls_adls_csv_source_properties_typeProperties_url": {
+			"value": "https://1ststorageaccount01.dfs.core.windows.net/"
+		},
+		"ls_adls_json_sink_properties_typeProperties_url": {
+			"value": "https://2ndstorageaccount02.dfs.core.windows.net/"
+		},
+		"ls_adls_transformedCSV_sink_properties_typeProperties_url": {
+			"value": "https://1ststorageaccount01.dfs.core.windows.net/"
+		},
+		"ls_http_csv_source_properties_typeProperties_url": {
+			"value": "https://files.cdn.thinkific.com"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
