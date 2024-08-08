@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "this is used to execute master pipeline at a schedule time intervals",
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
